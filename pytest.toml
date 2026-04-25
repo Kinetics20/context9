@@ -8,7 +8,7 @@ addopts = [
     "--strict-markers",
     "--import-mode=importlib",
     "--durations=10",
-    "--cov=flashcards",
+    "--cov=context9",
     "--cov-branch",
     "--cov-report=term-missing:skip-covered",
     "--cov-report=xml",

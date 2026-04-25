@@ -19,3 +19,12 @@ htmlcov/
 .ty/
 .vscode
 .idea
+
+# Local secrets
+.env
+.env.*
+.mcp.json
+.codex/config.toml
+.codex/.env
+.codex/tmp/
+.codex/memories/

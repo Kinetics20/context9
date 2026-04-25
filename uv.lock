@@ -242,7 +242,7 @@ wheels = [
 ]
 
 [[package]]
-name = "contex9"
+name = "context9"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
