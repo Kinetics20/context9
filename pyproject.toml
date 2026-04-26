@@ -22,6 +22,7 @@ dependencies = [
 
 [project.scripts]
 context9 = "context9:main"
+contex9-embedder = "context9.embedder_api:run"
 
 [build-system]
 requires = ["uv_build>=0.11.7,<0.12.0"]

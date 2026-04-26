@@ -1,0 +1,20 @@
+ARG UV_VERSION=0.11.7
+
+FROM ghcr.io/astral-sh/uv:${UV_VERSION} AS uv-bin
+
+FROM python:3.14.4-slim AS runtime
+
+ENV PATH="/app/.venv/bin:${PATH}" \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    UV_LINK_MODE=copy
+
+WORKDIR /app
+
+COPY --from=uv-bin /uv /uvx /usr/local/bin/
+COPY pyproject.toml uv.lock README.md ./
+COPY src ./src
+
+RUN uv sync --frozen --no-dev
+
+CMD ["context9", "--help"]
